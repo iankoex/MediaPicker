@@ -10,6 +10,7 @@ import Foundation
 /// Most of the functionallity of media Picker is Handled by the various extensions to SwiftUI.View
 public class MediaPicker {
     
+    /// This will only work in iOS as media in iOS needs to be copied to temporary directory
     public static func cleanDirectory() {
         Task {
             let directory = FileManager.default.temporaryDirectory.appendingPathComponent("MediaPicker")

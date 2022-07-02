@@ -50,11 +50,8 @@ fileprivate struct MediaPickerWrapper: View {
     }
     
     var body: some View {
-        MediaPickerRepresentable(
-            viewModel: viewModel,
-            isPresented: $isPresented
-        )
-        .overlay(viewModel.isLoading ? loadingView : nil)
+        MediaPickerRepresentable(viewModel: viewModel, isPresented: $isPresented)
+            .overlay(viewModel.isLoading ? loadingView : nil)
     }
     
     var loadingView: some View {
